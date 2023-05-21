@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         //ifStatements()
         //whenStatement()
         //arrays()
-        maps()
+        //maps()
+        loops()
     }
     private fun variableAndContants(){
         // Single line comment
@@ -178,5 +179,49 @@ class MainActivity : AppCompatActivity() {
         // Remove an element
         myMap.remove("Panussis")
         println(myMap)
+    }
+
+    private fun loops(){
+        val myArray: List<String> = listOf("Hello", "Welcome to Kotlin","World")
+        val myMap: MutableMap<String, Int> = mutableMapOf("Ivan" to 1, "Panussis" to 2, "Kotlin" to 5)
+
+        // For
+        for (myString: String in myArray){
+            println(myString)
+        }
+
+        for (myElement: MutableMap.MutableEntry<String, Int> in myMap){
+            println("${myElement.key}-${myElement.value}")
+        }
+
+        for (x in 0..10){
+            println(x)
+        }
+
+        for (x in 0 until 10){
+            println(x)
+        }
+
+        for (x in 0..10 step 2){
+            println(x)
+        }
+
+        for (x in 10 downTo 0 step 3){
+            println(x)
+        }
+
+        val myNumericArray = (0..20)
+        for (myNum: Int in myNumericArray){
+            println(myNum)
+        }
+
+        // While
+        var x = 0
+
+        while( x < 10){
+            println(x)
+            //x++
+            x += 2
+        }
     }
 }
