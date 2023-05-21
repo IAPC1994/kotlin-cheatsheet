@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         //maps()
         //loops()
         //nullSafety()
-        functions()
+        //functions()
+        classes()
     }
     private fun variableAndContants(){
         // Single line comment
@@ -281,5 +282,18 @@ class MainActivity : AppCompatActivity() {
     // Functions with value return
     fun sumTwoNumbers(first:Int, second:Int):Int{
         return first + second
+    }
+
+    private fun classes(){
+        val ivan = Programmer("Ivan", 27, arrayOf(Programmer.Language.JAVASCRIPT, Programmer.Language.JAVA, Programmer.Language.KOTLIN))
+        println(ivan.name)
+        ivan.age = 29
+        ivan.code();
+
+        val sarah = Programmer("Sarah", 20, arrayOf(Programmer.Language.REACT), arrayOf(ivan))
+        println(sarah.name)
+        sarah.code();
+
+        println("${sarah.friends?.first()?.name} is friend of ${sarah.name}")
     }
 }
