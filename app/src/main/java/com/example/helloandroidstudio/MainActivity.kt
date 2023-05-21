@@ -14,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         //arrays()
         //maps()
         //loops()
-        nullSafety()
+        //nullSafety()
+        functions()
     }
     private fun variableAndContants(){
         // Single line comment
@@ -251,5 +252,34 @@ class MainActivity : AppCompatActivity() {
         }?: run{
             println(mySafetyString)
         }
+    }
+
+    private fun functions(){
+        sayHello()
+        sayHello()
+        sayHello()
+
+        sayMyName("Ivan");
+        sayMyNameAndAge("Ivan", 29)
+        println(sumTwoNumbers(5,10))
+        println(sumTwoNumbers(10,sumTwoNumbers(5,5)))
+    }
+    // Simple function
+    fun sayHello(){
+        println("Hello!")
+    }
+
+    // Function with parameters
+    fun sayMyName( name:String ){
+        println("Hello my name is $name")
+    }
+
+    fun sayMyNameAndAge( name:String, age:Int ){
+        println("Hello my name is $name and I am $age years old")
+    }
+
+    // Functions with value return
+    fun sumTwoNumbers(first:Int, second:Int):Int{
+        return first + second
     }
 }
