@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
         //whenStatement()
         //arrays()
         //maps()
-        loops()
+        //loops()
+        nullSafety()
     }
     private fun variableAndContants(){
         // Single line comment
@@ -222,6 +223,33 @@ class MainActivity : AppCompatActivity() {
             println(x)
             //x++
             x += 2
+        }
+    }
+
+    private fun nullSafety(){
+        var myString = "Ivan"
+        println(myString)
+        // myString = null
+        var mySafetyString: String? = "IvanDev null safety"
+        mySafetyString = null
+        println(mySafetyString)
+
+        mySafetyString = "Hello World"
+        //println(mySafetyString)
+
+        /*if( mySafetyString != null){
+            println(mySafetyString!!)
+        }else{
+            println(mySafetyString)
+        }*/
+
+        //Safe call
+        println(mySafetyString?.length)
+
+        mySafetyString?.let{
+            println(it)
+        }?: run{
+            println(mySafetyString)
         }
     }
 }
