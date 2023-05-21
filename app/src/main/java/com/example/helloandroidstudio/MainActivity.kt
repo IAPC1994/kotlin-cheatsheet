@@ -11,7 +11,8 @@ class MainActivity : AppCompatActivity() {
         //dataTypes()
         //ifStatements()
         //whenStatement()
-        arrays()
+        //arrays()
+        maps()
     }
     private fun variableAndContants(){
         // Single line comment
@@ -153,5 +154,29 @@ class MainActivity : AppCompatActivity() {
         myArray.clear() // Remove all the elements
         myArray.first() // Return the first element
         myArray.last() // Return the last element
+    }
+
+    private fun maps(){
+        var myMap: Map<String, Int> = mapOf()
+
+        // Add elements
+        myMap = mutableMapOf("Ivan" to 1, "Full Stack Developer" to 2, "Age" to 29)
+        println(myMap)
+
+        // Add one element
+        myMap["Panussis"] = 5
+        myMap.put("React", 8)
+        println(myMap)
+
+        // Update an element
+        myMap.put("React", 3)
+        println(myMap)
+
+        // Access data
+        println(myMap["React"])
+
+        // Remove an element
+        myMap.remove("Panussis")
+        println(myMap)
     }
 }
